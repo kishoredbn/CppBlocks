@@ -15,6 +15,12 @@ void Test() {
     }
 
     STATIC std::cout<<"you can use it like this also, like an \"if\" statement\n";
+
+    STATIC_N(3) {
+        static int call_counter_block = 1;
+        std::cout<<"Even better, you can specify how many times you want to execute the block\n";
+        std::cout<<"********************** block called : "<< call_counter_block++ <<" times \n";
+    }
 }
 
 int main() {
