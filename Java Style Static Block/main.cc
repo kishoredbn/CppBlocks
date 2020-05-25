@@ -3,7 +3,7 @@
 #include "static_block.h"
 
 void Test() {
-    static int call_counter = 1;
+    static uint32_t call_counter = 1;
     std::cout<<"function called : "<< call_counter++ <<" times \n";
 
     STATIC {
@@ -25,16 +25,10 @@ void Test() {
 
 int main() {
 
-    Test();
-    Test();
-    Test();
-    Test();
-    Test();
-    Test();
-    Test();
-    Test();
-    Test();
-    Test();
+    int32_t count = 100;
+    while(count--) {
+        Test();
+    }
 
     return 0;
 }
